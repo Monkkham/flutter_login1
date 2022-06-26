@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:loginsystem/model/profile.dart';
-
+import 'package:loginsystem/screen/login.dart';
 import 'home.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -84,9 +84,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         msg: "สร้างบัญชีผู้ใช้เรียบร้อยแล้ว",
                                         gravity: ToastGravity.TOP
                                       );
-                                      Navigator.pushReplacement(context,
+                                      Navigator.push(context,
                                       MaterialPageRoute(builder: (context){
-                                          return HomeScreen();
+                                          return LoginScreen();
                                       }));
                                     });
                                   }on FirebaseAuthException catch(e){

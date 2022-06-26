@@ -82,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       password: profile.password)
                                       .then((value){
                                           formKey.currentState.reset();
-                                          Navigator.pushReplacement(context,
+                                          Navigator.push(context,
                                           MaterialPageRoute(builder: (context){
                                               return WelcomeScreen();
                                           }));
